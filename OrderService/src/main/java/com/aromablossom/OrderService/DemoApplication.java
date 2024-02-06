@@ -1,4 +1,4 @@
-package com.aromablossom.ProductService;
+package com.aromablossom.OrderService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
