@@ -1,4 +1,4 @@
-package com.aromablossom.ProductService.model;
+package com.aromablossom.OrderService.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProductResponse {
-
-    private String productName;
+public class OrderRequest {
+    
     private long productId;
+    private long totalAmount;
     private long quantity;
-    private long price;
+    private PaymentMode paymentMode;
 }
