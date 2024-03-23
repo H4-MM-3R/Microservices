@@ -5,7 +5,7 @@ spring:
   application:
     name: API-GATEWAY
   config:
-    import: configserver:http://localhost:9296
+    import: configserver:${CONFIG_SERVER_URL:http://localhost:9296}
   cloud:
     gateway:
       routes:
@@ -48,18 +48,23 @@ spring:
               args:
                 redis-rate-limiter.replenishRate: 1
                 redis-rate-limiter.burstCapacity: 1
+  security:
+    oauth2:
+      client:
+        registration:
+          okta:
+            client-id: 0oafvshwavHqJhiv25d7
+            client-secret: Jk1soeTF3xdWoM5szibDGFhnS117cdUeFmiGIgpq5oYZ98DmdMnrZZExRoFbTWG6
 
 okta:
   oauth2:
     issuer: https://dev-97933953.okta.com/oauth2/default
     audience: api://default
-    client-id: ${OKTA_OAUTH2_CLIENT_ID}
-    client-secret: ${OKTA_OAUTH2_CLIENT_SECRET}
     scopes: openid, profile, email, offline_access
+
 
 management:
   tracing:
     sampling:
       probability: 1.0
-
 

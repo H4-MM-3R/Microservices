@@ -1,0 +1,1 @@
+docker run --add-host=host.docker.internal:host-gateway -d -p 9090:9090 -e EUREKA_SERVER_ADDRESS=http://172.17.0.3:8761/eureka -e CONFIG_SERVER_URL=host.docker.internal -e OKTA_OAUTH2_CLIENT_ID=0oa1hj6j7bQrFzVpZ5d7 -e OKTA_OAUTH2_CLIENT_SECRET=Jk1soeTF3xdWoM5szibDGFhnS117cdUeFmiGIgpq5oYZ98DmdMnrZZExRoFbTWG6 --name cloudgateway 0a9a7a052076

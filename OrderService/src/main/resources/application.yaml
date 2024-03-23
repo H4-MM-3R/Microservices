@@ -26,8 +26,8 @@ spring:
               provider: okta
               authorized-grant-type: client_credentials
               scope: internal_scope
-              client-id: ${OKTA_OAUTH2_CLIENT_ID}
-              client-secret: ${OKTA_OAUTH2_CLIENT_SECRET}
+              client-id: 0oafvshwavHqJhiv25d7
+              client-secret: Jk1soeTF3xdWoM5szibDGFhnS117cdUeFmiGIgpq5oYZ98DmdMnrZZExRoFbTWG6
           provider:
             okta:
               issuer-uri: https://dev-97933953.okta.com/oauth2/default

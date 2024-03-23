@@ -12,9 +12,9 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig {
 
-    public SecurityFilterChain securityWebFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((authorizeRequest) -> authorizeRequest.anyRequest().authenticated())
-                .oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults()));
-        return http.build();
-    }
+  public SecurityFilterChain securityWebFilterChain(HttpSecurity http) throws Exception {
+    http.authorizeHttpRequests((authorizeRequest) -> authorizeRequest.anyRequest().authenticated())
+        .oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults()));
+    return http.build();
+  }
 }

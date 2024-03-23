@@ -121,6 +121,7 @@ public class OrderServiceImpl implements OrderService {
             .amount(order.getAmount())
             .orderDate(order.getOrderDate())
             .productDetails(productDetails)
+            .paymentDetails(paymentDetails)
             .build();
 
         return orderResponse;
